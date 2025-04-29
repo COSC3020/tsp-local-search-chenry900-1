@@ -23,7 +23,7 @@ function search(distance_matrix, tour) {
                 }
             }
         }
-    } while (improved = true);
+    } while (improved == true);
 
     return answer;
 }
@@ -37,5 +37,5 @@ function distance(distance_matrix, tour) {
 }
 
 function twoOpt(tour, o, i) {
-    return tour.slice(0, i).concat(tour.slice(i,k +1).reverse()).concat(tour.slice(k+1));
+    return tour.slice(0, o).concat(tour.slice(o, i + 1).reverse()).concat(tour.slice(i+1));
 }
