@@ -1,6 +1,6 @@
 function tsp_ls(distance_matrix) {
     var length = distance_matrix.length;
-    var tour = [...Array(length.keys())];
+    var tour = [...Array(length).keys()];
 
 
     return search(distance_matrix, tour);
