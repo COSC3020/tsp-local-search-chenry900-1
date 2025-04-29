@@ -7,7 +7,7 @@ function tsp_ls(distance_matrix) {
 }
 function search(distance_matrix, tour) {
     var improved;
-    var answer = tourDistance(distance_matrix, tour);
+    var answer = distance(distance_matrix, tour);
     var length = tour.length;
 
     do {
