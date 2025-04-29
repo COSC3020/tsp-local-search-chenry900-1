@@ -36,6 +36,6 @@ function distance(distance_matrix, tour) {
     return total;
 }
 
-fuction twoOpt(tour, o, i) {
+function twoOpt(tour, o, i) {
     return tour.slice(0, i).concat(tour.slice(i,k +1).reverse()).concat(tour.slice(k+1));
 }
