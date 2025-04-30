@@ -8,7 +8,7 @@ function tsp_ls(distance_matrix) {
     }
 
     for (i = 0; i < length; i++) {
-        var num = Math.floor(Math.random() * loader.length);
+        var num = Math.floor(Math.random() * loader.length);//copilot
         tour[i] = loader[num];
         loader.splice(num, 1);
     }
@@ -46,5 +46,5 @@ function distance(distance_matrix, tour) {
 }
 
 function twoOpt(tour, o, i) {
-    return tour.slice(0, o).concat(tour.slice(o, i + 1).reverse()).concat(tour.slice(i+1));
+    return tour.slice(0, o).concat(tour.slice(o, i + 1).reverse()).concat(tour.slice(i+1));//copilot
 }
