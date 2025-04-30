@@ -1,29 +1,38 @@
 function tsp_ls(distance_matrix) {
     var length = distance_matrix.length;
-    var tour = [...Array(length).keys()];
+    var tour = [];
+    var loader = [];
+
+    for (i = 0; i < length; i++) {
+        loader[i] = i;
+    }
+
+    for (i = 0; i < length; i++) {
+        var num = Math.floor(Math.random() * loader.length);
+        tour[i] = loader[num];
+        loader.splice(num, 1);
+    }
 
 
     return search(distance_matrix, tour);
 }
 function search(distance_matrix, tour) {
-    var improved;
+    var improved = 0;
     var answer = distance(distance_matrix, tour);
     var length = tour.length;
+    var numIter = 199;
 
     do {
-        improved = false;
-        for (var o = 1; o < length - 1; o++) {
-            for (var i = o + 1; i < length; i++) {
-                var newTour = twoOpt(tour, o, i);
-                var newDistance = distance(distance_matrix, newTour);
-                if (answer > newDistance) {
-                    tour = newTour;
-                    answer = newDistance;
-                    improved = true;
-                }
-            }
+        var i = Math.floor(Math.random() * (length - 2)) + 1;//copilot
+        var k = Math.floor(Math.random() * (length - 1 - 1)) + i + 1;//copilot
+        var newTour = twoOpt(tour, i, k);
+        var newDistance = distance(distance_matrix, newTour);
+        if (answer > newDistance) {
+            tour = newTour;
+            answer = newDistance;
         }
-    } while (improved == true);
+        improved += 1;
+    } while (improved < numIter);
 
     return answer;
 }
