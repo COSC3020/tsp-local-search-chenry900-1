@@ -33,10 +33,10 @@ function search(distance_matrix, tour) {
             tour = newTour;
             answer = newDistance;
             improved += 1;
-            noImprovement = 0;
+            noImprovment = 0;
         }
         else {
-            noImprovement += 1;
+            noImprovment += 1;
         }
     } while (improved < numIter && noImprovement < maxNoImprovement);
 
