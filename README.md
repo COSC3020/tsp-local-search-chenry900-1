@@ -51,7 +51,7 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-To start my code runs through loading an array n long with the numbers before it randomly scrambles them into the starting order so it goes through n twice. then we do the 2Opt section and we create a new array in 2Opt so worst case we would reverse the entire tour meaning we have to go through n once and we then need to calculate the distance of each one adding another n. The do-while loop goes 200 times so it would add O(200n). So worst case time complextiy would be O(n^2) + O(n^2) + O(200n) making the time complexity O(n^2).
+To start my code runs through loading an array n long with the numbers before it randomly scrambles them into the starting order so it goes through n twice. then we do the 2-Opt section and we create a new array in 2-Opt so worst case we would reverse the entire tour meaning we have to go through n once and we then need to calculate the distance of each one adding another n. The do while loop runs until it finds 200 improvements or 25 times with no improvement. If we assume the worst case it will use the 200 improvements and take O(200n) time. So the run time will be O(n^2) because of the way that I generate the random order at the start.
 
 The memory complexity would be O(n) because my loader takes n space, my tour takes n space and worst case newTour would take n space. So you end up with 3O(n) making the memory complexity O(n).
 
