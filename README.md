@@ -53,7 +53,7 @@ reasoning, to this markdown file.
 
 To start my code runs through loading an array n long with the numbers before it randomly scrambles them into the starting order so it goes through n twice. then we do the 2Opt section and we create a new array in 2Opt so worst case we would reverse the entire tour meaning we have to go through n once and we then need to calculate the distance of each one adding another n. The do-while loop goes 200 times so it would add O(200n). So worst case time complextiy would be O(n^2) + O(n^2) + O(200n) making the time complexity O(n^2).
 
-The memory complexity would be O(n^2) because everything else stored is n while the distance_matrix is n^2 for memory because its an nxn matrix.
+The memory complexity would be O(n) because my loader takes n space, my tour takes n space and worst case newTour would take n space. So you end up with 3O(n) making the memory complexity O(n).
 
 I used copilot to help me get the random part of the assignment done correctly as well as the long slice in 2Opt to work correctly.
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
