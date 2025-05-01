@@ -21,6 +21,8 @@ function search(distance_matrix, tour) {
     var answer = distance(distance_matrix, tour);
     var length = tour.length;
     var numIter = 199;
+    var noImprovment = 0;
+    var maxNoImprovement = 25;
 
     do {
         var i = Math.floor(Math.random() * (length - 2)) + 1;//copilot
@@ -30,9 +32,12 @@ function search(distance_matrix, tour) {
         if (answer > newDistance) {
             tour = newTour;
             answer = newDistance;
+            improved += 1;
+            noImprovement = 0;
         }
-        improved += 1;
-    } while (improved < numIter);
+        else {
+            noImprovement += 1;
+    } while (improved < numIter && noImprovement < maxNoImprovement);
 
     return answer;
 }
