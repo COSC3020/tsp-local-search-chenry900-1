@@ -38,7 +38,7 @@ function search(distance_matrix, tour) {
         else {
             noImprovment += 1;
         }
-    } while (improved < numIter && noImprovement < maxNoImprovement);
+    } while (improved < numIter && noImprovment < maxNoImprovement);
 
     return answer;
 }
