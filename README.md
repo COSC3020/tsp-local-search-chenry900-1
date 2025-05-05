@@ -51,9 +51,10 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-To start my code runs through loading an array n long with the numbers before it randomly scrambles them into the starting order so it goes through n twice. then we do the 2-Opt section and we create a new array in 2-Opt so worst case we would reverse the entire tour meaning we have to go through n once and we then need to calculate the distance of each one adding another n. The do while loop runs until it finds 200 improvements or 25 times with no improvement. If we assume the worst case it will use the 200 improvements and take O(200n) time. So the run time will be O(n^2) because of the way that I generate the random order at the start.
+To start my code runs through loading an array n long with the numbers before it randomly scrambles them into the starting order so it goes through n twice. then we do the 2-Opt section and we create a new array in 2-Opt so worst case we would reverse the entire tour meaning we have to go through n once and we then need to calculate the distance of each one adding another n. The do while loop runs until it finds 200 improvements or 25 times with no improvement. If we assume the worst case it will use the 200 improvements and take O(200n) time. So the run time will be O(n).
 
 The memory complexity would be O(n) because my loader takes n space, my tour takes n space and worst case newTour would take n space. So you end up with 3O(n) making the memory complexity O(n).
 
 I used copilot to help me get the random part of the assignment done correctly as well as the long slice in 2Opt to work correctly.
+I had the TA help me with the runtime analysis.
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
